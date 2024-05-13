@@ -36,4 +36,26 @@ export const productList = [
   },
 ];
 
-// export { chatList };
+export const tableData = [
+  {
+    name: "Annual Report",
+    fileType: "PDF",
+    category: "Property",
+    author: "Diana Matthews",
+    status: "Send",
+  },
+  {
+    name: "Business Plan",
+    fileType: "WORDf",
+    category: "Cryptocurrency",
+    author: "Philip James",
+    status: "Send",
+  },
+  {
+    name: "Marketing Tool",
+    fileType: "PDF",
+    category: "Content Creator",
+    author: "Amanda Ross",
+    status: "Pending",
+  },
+];

@@ -29,13 +29,8 @@
               <BarChart />
             </div>
           </section>
-          <section class="chart-section">
-            <div>
-              <LineChart />
-            </div>
-            <div>
-              <BarChart />
-            </div>
+          <section class="table-section">
+            <BaseTable />
           </section>
         </div>
         <RightSidePanel />
@@ -46,6 +41,7 @@
 <script setup lang="ts">
 import RightSidePanel from './components/RightSidePanel.vue';
 import BaseCard from './components/BaseCard.vue';
+import BaseTable from './components/BaseTable.vue';
 import BarChart from './components/BarChart.vue';
 import LineChart from './components/LineChart.vue';
 import SideNav from './components/SideNav.vue';
@@ -78,6 +74,10 @@ import { Icon } from "@iconify/vue"
 .chart-section {
   display: grid;
   grid-template-columns: 50% 50%;
+}
+.table-section{
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 @media (max-width: 1024px) {

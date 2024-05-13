@@ -11,10 +11,13 @@ body {
   }
 
   .card-container {
-    margin: 1rem;
+    margin: 0.5rem;
     background-color: var(--card-bg);
     padding: 1.25rem;
     border-radius: 25px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    max-width:300px
+}
+.canvas-container{
+  max-width: 90%;
+  max-height: 20vh;
 }

@@ -1,7 +1,12 @@
 <template>
     <div class="card-container">
         <h3>Recent Marketing</h3>
-        <Bar id="my-chart-id" :data="chartData" :options="options.options" />
+        <div style="display: flex; color: green; column-gap: 0.25rem;">
+            <div>
+                <Icon icon="fa6-solid:arrow-trend-up" color="green" height="20" /> 16%
+            </div>
+            <Bar id="my-chart-id" class="canvas-container" :data="chartData" :options="options.options" />
+        </div>
     </div>
 </template>
 
@@ -14,7 +19,7 @@ const chartData = {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
     datasets: [{
         data: [40, 20, 12, 32, 16, 23, 42, 12, 32, 12, 54, 12],
-        backgroundColor: "slateblue",
+        backgroundColor: "#1291C2",
         labels: "none"
     }]
 }
@@ -27,6 +32,7 @@ const options = {
                 }
             },
             y: {
+                display: false,
                 grid: {
                     display: false
                 }
@@ -42,12 +48,13 @@ const options = {
 
 </script>
 
-<!-- <style scoped>
-.card-container {
+<style scoped>
+
+/* .card-container {
     margin: 1rem;
     background-color: var(--card-bg);
     padding: 1.25rem;
     border-radius: 25px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-</style> -->
+} */
+</style>

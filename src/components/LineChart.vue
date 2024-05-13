@@ -1,7 +1,12 @@
 <template>
     <div class="card-container">
         <h3>Recent Workflow</h3>
-        <Line :data="data" :options="options.options" />
+        <div style="display: flex; color: green; column-gap: 0.25rem;">
+            <div>
+                <Icon icon="fa6-solid:arrow-trend-up" color="green" height="20" /> 16%
+            </div>
+                <Line class="canvas-container" :data="data" :options="options.options" />
+            </div>
     </div>
 
 </template>
@@ -32,8 +37,9 @@ const data = {
     datasets: [
         {
             label: 'Data One',
-            backgroundColor: 'red',
-            data: [40, 39, 10, 40, 39, 80, 40]
+            backgroundColor: '#1291C2',
+            borderColor:'#1291C2',
+            data: [40, 20, 12, 32, 16, 23, 42, 12, 32, 12, 54, 12],
         }
     ],
 }
@@ -47,6 +53,7 @@ const options = {
                 }
             },
             y: {
+                display:false,
                 grid: {
                     display: false
                 }

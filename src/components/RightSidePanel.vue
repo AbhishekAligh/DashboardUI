@@ -19,6 +19,10 @@ import PanelItem from './PanelItems.vue'
 import { chatList, productList } from "../data/dummy.ts";
 </script>
 <style scoped>
+.right-side-panel {
+    display: none;
+}
+
 @media (min-width: 1024px) {
     .right-side-panel {
         display: flex;

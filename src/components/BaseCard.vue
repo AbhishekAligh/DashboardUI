@@ -30,14 +30,6 @@ const props = defineProps<{
 </script>
 
 <style scoped>
-/* .card-container {
-    margin: 1rem;
-    background-color: var(--card-bg);
-    padding: 1.25rem;
-    border-radius: 25px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-} */
-
 .icon-top-corner {
     background-color: #E4E9F5;
     font-size: 2rem;

@@ -2,8 +2,8 @@
     <div class="card-container">
         <h3>Recent Marketing</h3>
         <div style="display: flex; color: green; column-gap: 0.25rem;">
-            <div>
-                <Icon icon="fa6-solid:arrow-trend-up" color="green" height="20" /> 16%
+            <div  style="display: flex; column-gap: 0.25rem;">
+                <Icon icon="fa6-solid:arrow-trend-up" color="green" height="20" /> <div>16%</div>
             </div>
             <Bar id="my-chart-id" class="canvas-container" :data="chartData" :options="options.options" />
         </div>
@@ -11,6 +11,7 @@
 </template>
 
 <script setup lang="ts">
+import {Icon} from '@iconify/vue'
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 
@@ -48,13 +49,3 @@ const options = {
 
 </script>
 
-<style scoped>
-
-/* .card-container {
-    margin: 1rem;
-    background-color: var(--card-bg);
-    padding: 1.25rem;
-    border-radius: 25px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-} */
-</style>

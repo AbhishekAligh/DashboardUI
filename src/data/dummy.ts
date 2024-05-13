@@ -73,7 +73,7 @@ export const tableData = [
   },
   {
     name: "Business Plan",
-    fileType: "WORDf",
+    fileType: "WORD",
     category: "Cryptocurrency",
     author: "Philip James",
     status: "Send",

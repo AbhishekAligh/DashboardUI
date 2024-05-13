@@ -36,6 +36,33 @@ export const productList = [
   },
 ];
 
+export const baseCardList = [
+  {
+    cardTitle: "Document",
+    content: "146.000",
+    delta: "17",
+    icon: "ic:outline-file-copy",
+  },
+  {
+    cardTitle: "Contact",
+    content: "1400",
+    delta: "19",
+    icon: "ri:contacts-book-upload-line",
+  },
+  {
+    cardTitle: "Email",
+    content: "150.700",
+    delta: "25",
+    icon: "ic:outline-email",
+  },
+  {
+    cardTitle: "Transaction",
+    content: "132.910",
+    delta: "16",
+    icon: "grommet-icons:transaction",
+  },
+];
+
 export const tableData = [
   {
     name: "Annual Report",

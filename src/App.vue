@@ -3,12 +3,15 @@
     <SideNav />
     <main class="mid-panel">
       <nav class="nav-container">
-        <h1>Overview</h1>
+        <div style="display: flex; align-items: center; column-gap:1rem;">
+          <Icon icon="gravity-ui:bars" height="1.5rem" class="hamburger-icon" />
+          <h1>Overview</h1>
+        </div>
         <div>
         </div>
         <div style="display: flex; column-gap: 0.5rem; align-items: center; ">
           <Icon icon="ph:bell-bold" height="24" />
-          <Icon icon="mdi:circle" height="36" />
+          <Icon icon="carbon:user-avatar-filled-alt" height="36" color="orange" />
           <div>Administrator
             <Icon icon="mdi:caret-down" />
           </div>
@@ -17,8 +20,9 @@
       <div style="display: flex; justify-content: space-between;">
         <div style="flex-grow: 3;">
           <section class="base-card-section">
-            <div v-for="i in 4">
-              <BaseCard class="item" cardTitle="Document" content="146.00" icon="ic:outline-file-copy" delta="12" />
+            <div v-for="item in baseCardList">
+              <BaseCard class="item" :cardTitle="item.cardTitle" :content="item.content" :icon="item.icon"
+                :delta="item.delta" />
             </div>
           </section>
           <section class="chart-section">
@@ -46,6 +50,7 @@ import BarChart from './components/BarChart.vue';
 import LineChart from './components/LineChart.vue';
 import SideNav from './components/SideNav.vue';
 import { Icon } from "@iconify/vue"
+import { baseCardList } from './data/dummy.ts'
 
 </script>
 <style scoped>
@@ -60,7 +65,7 @@ import { Icon } from "@iconify/vue"
 }
 
 .nav-container {
-  padding: 0.5rem 0.75rem;
+  padding: 1rem 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,21 +80,32 @@ import { Icon } from "@iconify/vue"
   display: grid;
   grid-template-columns: 50% 50%;
 }
-.table-section{
+
+.table-section {
   display: grid;
   grid-template-columns: 100%;
+}
+
+.hamburger-icon {
+  display: none;
 }
 
 @media (max-width: 1024px) {
   .base-card-section {
     grid-template-columns: 50% 50%;
   }
+
+  .hamburger-icon {
+    display: inline-block;
+  }
 }
+
 
 @media (max-width:768px) {
   .card-container {
     margin: 0.5rem;
   }
+
 
   .chart-section {
     grid-template-columns: 100%;

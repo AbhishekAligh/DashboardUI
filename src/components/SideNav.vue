@@ -26,7 +26,6 @@
 
 <script setup lang="ts">
 import NavItem from './NavItem.vue'
-import { Icon } from '@iconify/vue'
 </script>
 
 <style scoped>
@@ -43,11 +42,11 @@ import { Icon } from '@iconify/vue'
 @media (min-width: 1024px) {
   .sidebar-panel {
     display: flex;
-    min-width: 15vw;
+    min-width: 12dvw;
     color: white;
     padding: 1rem 1.5rem;
     background-color: #031737;
-    height: 95dvh;
+    height: 100dvh;
     flex-direction: column;
     row-gap: 1.5rem;
   }
